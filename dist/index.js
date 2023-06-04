@@ -69,6 +69,6 @@ async function main() {
         }
     }
 }
-sendTelegramNotification('2031747321', 'testetestestsetsettestestsetsetstseset');
-const cron = cronJob.schedule('0 8 * * *', main);
+// sendTelegramNotification('2031747321', 'testetestestsetsettestestsetsetstseset')
+const cron = cronJob.schedule('13 11 * * *', main);
 cron.start();

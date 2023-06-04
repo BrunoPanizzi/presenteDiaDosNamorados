@@ -21,7 +21,6 @@ async function checkIfAvaliable(): Promise<boolean> {
 
   await page.goto('https://www.strappyco.com.br/produtos/vibrador-pocket/')
 
-  console.clear()
   console.log('## LOADING PAGE ##')
   console.log(await page.title())
   console.log()
@@ -95,6 +94,6 @@ async function main() {
 
 sendTelegramNotification('2031747321', 'testetestestsetsettestestsetsetstseset')
 
-const cron = cronJob.schedule('0 8 * * *', main)
+const cron = cronJob.schedule('30 11 * * *', main)
 
 cron.start()
