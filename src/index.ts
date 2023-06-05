@@ -95,13 +95,13 @@ async function main() {
   // }
 }
 
-console.log('app started')
+console.log('app alksdjflksdjf')
 sendTelegramNotification('1543936636', 'testetestestsetsettestestsetsetstseset')
 
 // function main() {
   // console.log('runninn')
 // }
 
-const cron = cronJob.schedule('0 0-59 18 * * *', main)
+const cron = cronJob.schedule('0 0-59 18 * * *', () => main())
 
 cron.start()
