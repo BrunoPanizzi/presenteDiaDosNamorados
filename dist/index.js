@@ -9,7 +9,6 @@ async function checkIfAvaliable() {
     });
     const page = await browser.newPage();
     await page.goto('https://www.strappyco.com.br/produtos/vibrador-pocket/');
-    console.clear();
     console.log('## LOADING PAGE ##');
     console.log(await page.title());
     console.log();
@@ -69,6 +68,6 @@ async function main() {
         }
     }
 }
-// sendTelegramNotification('2031747321', 'testetestestsetsettestestsetsetstseset')
-const cron = cronJob.schedule('13 11 * * *', main);
+sendTelegramNotification('2031747321', 'testetestestsetsettestestsetsetstseset');
+const cron = cronJob.schedule('30 11 * * *', main);
 cron.start();
