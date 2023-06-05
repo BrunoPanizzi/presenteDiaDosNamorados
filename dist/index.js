@@ -50,26 +50,28 @@ async function sendTelegramNotification(chatId, text) {
     const json = await response.json();
     return json.ok;
 }
-// async function main() {
-//   const isAvaliable = await checkIfAvaliable()
-//   const mensagem = `
-//     Vamos vibrar de felicidade!
-//     [link do bagulho](https://www.strappyco.com.br/produtos/vibrador-pocket/)
-//   `
-//   if (isAvaliable) {
-//     const result = await Promise.all([
-//       sendTelegramNotification('2031747321', mensagem),
-//       sendTelegramNotification('1543936636', mensagem),
-//     ])
-//     if (result.every((i) => i)) {
-//       console.log('everything sent fine')
-//     }
-//   }
-// }
+async function main() {
+    console.log('DOIN STUFF!!!!!!!!!!');
+    sendTelegramNotification('1543936636', 'testando denovo');
+    // const isAvaliable = await checkIfAvaliable()
+    // const mensagem = `
+    //   Vamos vibrar de felicidade!
+    //   [link do bagulho](https://www.strappyco.com.br/produtos/vibrador-pocket/)
+    // `
+    // if (isAvaliable) {
+    //   const result = await Promise.all([
+    //     sendTelegramNotification('2031747321', mensagem),
+    //     sendTelegramNotification('1543936636', mensagem),
+    //   ])
+    //   if (result.every((i) => i)) {
+    //     console.log('everything sent fine')
+    //   }
+    // }
+}
 console.log('app started');
 sendTelegramNotification('1543936636', 'testetestestsetsettestestsetsetstseset');
-function main() {
-    console.log('runninn');
-}
-const cron = cronJob.schedule('0 * * * * *', main);
+// function main() {
+// console.log('runninn')
+// }
+const cron = cronJob.schedule('0 17 18 * * *', main);
 cron.start();
