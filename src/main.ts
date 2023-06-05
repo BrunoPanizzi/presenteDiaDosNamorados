@@ -102,6 +102,6 @@ sendTelegramNotification('1543936636', 'testetestestsetsettestestsetsetstseset')
   // console.log('runninn')
 // }
 
-const cron = cronJob.schedule('0 44 18 * * *', main)
+const cron = cronJob.schedule('0-59 0-59 18 * * *', main)
 
 cron.start()
